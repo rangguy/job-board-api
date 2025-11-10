@@ -3,7 +3,7 @@ const prisma = require('../helpers/db');
 
 exports.createJob = async (req, res) => {
   try {
-    const employerId = req.user.id; // dari JWT
+    const employerId = req.user.id;
     const { title, description, company_name, salary_min, salary_max, location } = req.body;
 
     if (!title) {
@@ -45,7 +45,7 @@ exports.getJobs = async (_req, res) => {
 exports.applyJob = async (req, res) => {
   try {
     const jobId = Number(req.params.id);
-    const userId = req.user.id; // dari JWT
+    const userId = req.user.id;
 
     const [user, job] = await Promise.all([
       prisma.user.findUnique({ where: { id: userId } }),

@@ -1,15 +1,13 @@
-// src/middlewares/auth.js
 const { verifyToken } = require("../helpers/jwt");
 
 function authenticate(req, res, next) {
   try {
     const auth = req.headers.authorization || "";
-    const [, token] = auth.split(" "); // "Bearer <token>"
+    const [, token] = auth.split(" ");
     if (!token)
       return res.status(401).json({ success: false, message: "Unauthorized" });
 
     const decoded = verifyToken(token);
-    // simpan user ke request untuk dipakai di controller
     req.user = {
       id: decoded.id,
       role: decoded.role,

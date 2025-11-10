@@ -1,4 +1,3 @@
-// src/helpers/jwt.js
 const jwt = require('jsonwebtoken');
 
 function getSecret() {

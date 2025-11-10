@@ -27,7 +27,6 @@ exports.register = async (req, res) => {
       data: { email, password: hashed, name, role: validRole },
     });
 
-    // jangan kirim password
     const { password: _, ...safe } = user;
     return res
       .status(201)
@@ -66,7 +65,6 @@ exports.login = async (req, res) => {
       name: user.name,
     });
 
-    // jangan kirim password
     const { password: _, ...safe } = user;
     return res.json({
       success: true,
