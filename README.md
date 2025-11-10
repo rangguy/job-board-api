@@ -71,7 +71,7 @@ npm install
 
 ### 2️⃣ Buat file `.env`
 ```env
-DATABASE_URL="mysql://root:@localhost:3306/bwa_blog"
+DATABASE_URL="postgresql://user:password@localhost:5432/nama_database?schema=public"
 JWT_SECRET="superlongrandomsecret"
 JWT_EXPIRES_IN="1d"
 ```
@@ -239,13 +239,3 @@ Authorization: Bearer <TOKEN_SEEKER>
 - JWT token disimpan di header `Authorization: Bearer <token>`
 
 ---
-
-## 📄 Lisensi
-
-MIT License
-
----
-
-## 👨‍💻 Author
-
-Dibuat dengan ❤️ untuk belajar Express + Prisma
