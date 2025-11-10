@@ -56,8 +56,8 @@ API sederhana untuk **user authentication**, **job posting**, **job listing**, d
 
 ### HTTPS
 ```bash
-git clone https://github.com/<username>/<repo>.git
-cd <repo>
+git clone https://github.com/rangguy/job-board-api.git
+cd job-board-api
 ```
 
 ---
