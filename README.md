@@ -85,7 +85,7 @@ npx prisma migrate dev --name init
 
 **Jika `.env` belum terbaca di Windows PowerShell:**
 ```powershell
-$env:DATABASE_URL="mysql://root:@localhost:3306/bwa_blog"; npx prisma generate
+$env:DATABASE_URL="postgresql://user:password@localhost:5432/nama_database?schema=public"; npx prisma generate
 ```
 
 ### 4️⃣ Jalankan server
